@@ -25,6 +25,11 @@ jobs:
     - name: Build system
       run: |
         apt update -y
+        apt install binfmt-support qemu-user-static -y
+        update-binfmts --display
+        dpkg --add-architecture amd64
+        apt update -y
+        apt upgrade -y
         apt-get install -y live-build squashfs-tools syslinux-common syslinux-utils xorriso isolinux git curl
         git clone https://github.com/Blade-OS/os.git -b gloomy
         cd os/
