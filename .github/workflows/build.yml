@@ -33,7 +33,7 @@ jobs:
         apt-get install -y live-build squashfs-tools syslinux-common syslinux-utils xorriso isolinux git curl
         git clone https://github.com/Blade-OS/os.git -b gloomy
         cd os/
-        ./build
+        ./build_arm
         mv blade/blade-"$(date -u +%y%m%d)"-arm64.hybrid.iso ~/blade.iso
         cd ../
 
