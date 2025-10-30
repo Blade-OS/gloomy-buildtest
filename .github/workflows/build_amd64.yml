@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-24.04
 
     container:
-      image: debian:latest
+      image: debian:bookworm
       volumes:
         - /proc:/proc
       options: --privileged
